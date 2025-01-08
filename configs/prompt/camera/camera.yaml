@@ -1,9 +1,9 @@
 
 - inference_config: "configs/inference/inference.yaml"
 
-  unet_path: "models/unet.ckpt"
-  image_controlnet_path: "models/image_controlnet.ckpt"
-  flow_controlnet_path: "models/flow_controlnet_obj_0024_2024-05-30_81k_camera_20k.ckpt"
+  unet_path: "../../model/ImageConductor/unet.ckpt"
+  image_controlnet_path: "../../model/ImageConductor/image_controlnet.ckpt"
+  flow_controlnet_path: "../../model/ImageConductor/flow_controlnet.ckpt"
 
   image_controlnet_config: "configs/inference/image_condition.yaml"
   flow_controlnet_config: "configs/inference/flow_condition.yaml"
@@ -37,12 +37,12 @@
 
 - inference_config: "configs/inference/inference.yaml"
 
-  lora_model_path: "models/personalized/TUSUN.safetensors"
+  lora_model_path: "../../model/ImageConductor/personalized/TUSUN.safetensors"
   lora_alpha: 0.6
 
-  unet_path: "models/unet.ckpt"
-  image_controlnet_path: "models/image_controlnet.ckpt"
-  flow_controlnet_path: "models/flow_controlnet_obj_0024_2024-05-30_81k_camera_20k.ckpt"
+  unet_path: "../../model/ImageConductor/unet.ckpt"
+  image_controlnet_path: "../../model/ImageConductor/image_controlnet.ckpt"
+  flow_controlnet_path: "../../model/ImageConductor/flow_controlnet.ckpt"
 
   image_controlnet_config: "configs/inference/image_condition.yaml"
   flow_controlnet_config: "configs/inference/flow_condition.yaml"
@@ -76,10 +76,10 @@
 
 - inference_config: "configs/inference/inference.yaml"
 
-  dreambooth_path: "models/personalized/helloobjects_V12c.safetensors"
-  unet_path: "models/unet.ckpt"
-  image_controlnet_path: "models/image_controlnet.ckpt"
-  flow_controlnet_path: "models/flow_controlnet_obj_0024_2024-05-30_81k_camera_20k.ckpt"
+  dreambooth_path: "../../model/ImageConductor/personalized/helloobjects_V12c.safetensors"
+  unet_path: "../../model/ImageConductor/unet.ckpt"
+  image_controlnet_path: "../../model/ImageConductor/image_controlnet.ckpt"
+  flow_controlnet_path: "../../model/ImageConductor/flow_controlnet.ckpt"
 
   image_controlnet_config: "configs/inference/image_condition.yaml"
   flow_controlnet_config: "configs/inference/flow_condition.yaml"

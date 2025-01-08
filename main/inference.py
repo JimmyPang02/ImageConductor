@@ -275,7 +275,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pretrained-model-path", type=str, default="models/stable-diffusion-v1-5",)
+    parser.add_argument("--pretrained-model-path", type=str, default="../../model/stable-diffusion-v1-5",)
     parser.add_argument("--inference-config",      type=str, default="configs/inference/inference.yaml")    
     parser.add_argument("--config",                type=str, required=True)
     

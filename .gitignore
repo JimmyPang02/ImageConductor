@@ -46,3 +46,7 @@ env/
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+*.mp4
+*.png
+*.jpg

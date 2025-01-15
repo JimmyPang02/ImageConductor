@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+samples/*
+
+samples*
+
 # Checkpoint files
 *.ckpt
 

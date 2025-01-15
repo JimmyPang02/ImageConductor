@@ -1,12 +1,12 @@
 CUDA_VISIBLE_DEVICES=0
 CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES python -m main.inference \
---config configs/prompt/trajs/object.yaml \
+--config configs/prompt/trajs/object_evaluate.yaml \
 
 
 
-CUDA_VISIBLE_DEVICES=0
-CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES python -m main.inference \
---config configs/prompt/camera/camera.yaml \
+# CUDA_VISIBLE_DEVICES=0
+# CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES python -m main.inference \
+# --config configs/prompt/camera/camera.yaml \
 
 
 
@@ -17,3 +17,4 @@ else
    echo "Success! Exit with 0"
    exit 0
 fi
+

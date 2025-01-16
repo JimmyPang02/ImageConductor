@@ -134,13 +134,14 @@ def run(webvid10_results,traj_type="coord"):
         elif traj_type=="optical_flow":
             traj_path = traj_path_optical
         
-        # resolution=(256,384)
-        resolution=(320,512) # (256,384)
+        resolution=(256,384)
+        # resolution=(320,512) # (256,384)
         traj = load_trajectory(traj_path, video_length,resolution=resolution,traj_type=traj_type)
         if traj==None:
+            print(f"{video_info}")
             continue
-
-
+        
+        # print(f"run inference for [{idx}]")
         print(f"video_info=={video_info}")
         print(f"frame_paths: {frame_paths[0]}...")
         print(f"traj_path: {traj_path}")
@@ -149,14 +150,15 @@ def run(webvid10_results,traj_type="coord"):
 
         # 跑起来
         config="/inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/pengzimian-241108540199/project/ImageConductor/configs/prompt/trajs/object_evaluate.yaml"
-        run_imageconductor_inference(frame_paths[0],traj_path,traj,caption,video_info,config)
+        run_imageconductor_inference(
+            frame_paths[0],traj_path,traj,caption,video_info,config,
+            pretrained_model_path="../../model/stable-diffusion-v1-5",
+            inference_config="configs/inference/inference.yaml", 
+            L=16,
+            W=resolution[0],# 512,#384,
+            H=resolution[1],# 320,#256,
+            )
 
-    print(cnt)
-    
-    # 进行处理
-    # ...
-    print("运行处理函数，数据已加载。")
-    # 这里可以添加数据处理的代码
     
 if __name__ == "__main__":
     video_length=16

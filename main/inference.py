@@ -253,7 +253,7 @@ def main(args):
             track_ponints_path= model_config.controlnet_trajs
             # with open(track_ponints_path, 'r') as f:
             #     track_ponints = json.load(f)
-            track_ponints = load_trajectory(args.traj_path,args.L).permute(1,0,2) #.permute(1,0,2) # .tolist() # 改用外部传入的轨迹
+            track_ponints = load_trajectory(args.traj_path,args.L,resolution=(model_config.H, model_config.W)).permute(1,0,2) #.permute(1,0,2) # .tolist() # 改用外部传入的轨迹
             print(track_ponints.shape) 
  
             controlnet_flows = points_to_flows(track_ponints, model_config.L, model_config.H, model_config.W) #  (15, 256, 384, 2)

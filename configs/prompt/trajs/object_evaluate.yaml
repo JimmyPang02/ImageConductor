@@ -8,10 +8,10 @@
   flow_controlnet_config: "configs/inference/flow_condition.yaml"
 
 
-  # H: 256 
-  # W: 384 
-  H: 320 #256 
-  W: 512 #384 
+  H: 256 
+  W: 384 
+  # H: 320 #256 
+  # W: 512 #384 
   L: 16
   seed: [10294865041322163136]
   steps: 25
